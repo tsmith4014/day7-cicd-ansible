@@ -12,36 +12,3 @@
       src: https://github.com/chandradeoarya/dojo-jump
       dest: /var/www/html/
       mode: '0644'
-
-
-
-
-
-# ---
-# - hosts: all
-#   become: yes
-#   tasks:
-#   - name: Install Nginx
-#     apt:
-#       name: nginx
-#       state: present
-
-#   - name: Copy Dojo Jump files
-#     copy:
-#       src: /path/to/dojo-jump/index.html
-#       dest: /var/www/html/index.html
-#       mode: '0644'
-
-#   - name: Create Nginx configuration file
-#     template:
-#       src: nginx.conf.j2
-#       dest: /etc/nginx/sites-available/dojo-jump
-#   - name: Enable Nginx configuration
-#     file:
-#       src: /etc/nginx/sites-available/dojo-jump
-#       dest: /etc/nginx/sites-enabled/dojo-jump
-#       state: link
-#   - name: Restart Nginx
-#     systemd:
-#       name: nginx
-#       state: restarted
