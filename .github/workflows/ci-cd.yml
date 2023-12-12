@@ -21,6 +21,9 @@ jobs:
         echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
 
+    - name: Disable host key checking
+      run: echo "ANSIBLE_HOST_KEY_CHECKING=False" >> $GITHUB_ENV
+
     - name: Install Ansible
       run: pip install ansible
 
