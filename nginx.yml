@@ -5,7 +5,7 @@
   - name: Update APT package list
     apt:
       update_cache: yes
-      
+
   - name: Install Nginx
     apt:
       name: nginx
@@ -13,6 +13,6 @@
 
   - name: Copy Website Files
     copy:
-      src: https://github.com/chandradeoarya/dojo-jump
+      src: https://github.com/chandradeoarya/dojo-jump.git
       dest: /var/www/html/
       mode: '0644'
