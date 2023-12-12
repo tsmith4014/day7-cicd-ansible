@@ -13,6 +13,6 @@
 
   - name: Copy Website Files
     copy:
-      src: https://github.com/chandradeoarya/dojo-jump.git
+      src: ./dojo-jump
       dest: /var/www/html/
       mode: '0644'

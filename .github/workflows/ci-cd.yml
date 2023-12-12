@@ -10,6 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Clone Website Repository
+      run: git clone https://github.com/chandradeoarya/dojo-jump.git
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
